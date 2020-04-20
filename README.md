@@ -53,7 +53,7 @@ Things you may want to cover:
 |password|char(32)|null: false, |
 ## Association
 - belongs_to :group
-- belongs_to :message
+- has_many :messages, through: :groups_users
 
 ## groupテーブル
 |Column|Type|Options|
@@ -62,5 +62,5 @@ Things you may want to cover:
 |group_member|integer|null: true, foreign_key: true|
 ## Association
 - belongs_to :user
-- belongs_to :message
+- has_many :messages, through: :groups_users
 
