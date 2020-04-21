@@ -50,10 +50,10 @@ Things you may want to cover:
 |------|----|-------|
 |name|varchar(255)|null: false, unique: true, foreign_key: true|
 |email|vrchar(255)|null: false, foreign_key: true|
-|password|char(32)|null: false, |
 ## Association
-- belongs_to :group
-- has_many :messages, through: :groups_users
+- has_many :groups, through: :groups_users
+- has_many :messages
+- has_many :groups_users
 
 ## groupテーブル
 |Column|Type|Options|
@@ -61,6 +61,7 @@ Things you may want to cover:
 |group_name|vachar(255)|null: false, foreign_key: false|
 |group_member|integer|null: true, foreign_key: true|
 ## Association
-- belongs_to :user
-- has_many :messages, through: :groups_users
+- has_many :users, through: :groups_users
+- has_many :messages
+- has_many :groups_users
 
