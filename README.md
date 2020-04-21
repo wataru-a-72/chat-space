@@ -37,8 +37,8 @@ Things you may want to cover:
 ## messageテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false, unique: true, foreign_key: true|
-|image|string|null: false, foreign_key: true|
+|body|text|foreign_key: true|
+|image|string|foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 ## Association
@@ -48,8 +48,8 @@ Things you may want to cover:
 ## userテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|varchar(255)|null: false, unique: true, foreign_key: true|
-|email|vrchar(255)|null: false, foreign_key: true|
+|name|string|null: false, unique: true|
+|email|string|null: false, foreign_key: true|
 ## Association
 - has_many :groups, through: :groups_users
 - has_many :messages
@@ -58,8 +58,7 @@ Things you may want to cover:
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|vachar(255)|null: false, foreign_key: false|
-|group_member|integer|null: true, foreign_key: true|
+|name|string|null: false|
 ## Association
 - has_many :users, through: :groups_users
 - has_many :messages
