@@ -1,24 +1,24 @@
 .side-bar
   .side-header
-    .side-header_box
-      %p.side-header_box_user_name
+    .side-header__box
+      %p.side-header__box_user_name
         k
-      %ul.side-header_box_menu
+      %ul.side-header__box_menu
         %li.side-header_box_edit-user
           = link_to "#" do
             = icon('fas', 'edit')
-        %li.side-header_box_new-group
+        %li.side-header__box_new-group
           = link_to "/" do      
             = icon('fas', 'cog')
   .groups
     = link_to "#",class:"group" do
-      %p.group_group-name
+      %p.group__group-name
         test
-      %p.group_latest-massage
+      %p.group__latest-massage
         まだメッセージはありません
     = link_to "#",class:"group" do
-      %p.group_group-name
+      %p.group__group-name
         test
-      %p.group_latest-massage
+      %p.group__latest-massage
         まだメッセージはありません    
 
