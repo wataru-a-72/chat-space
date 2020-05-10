@@ -2,9 +2,13 @@
   .chat-header
     .main_header_left-box
       %h2.main_header_left-box-current_group 
-        
+        = @group.name
+      
       %ul.main_header_left-box-member-list
-        <%= Group.all>
+        Member:
+        - @group.users.each do |user|
+          =user.name
+          
     = link_to  do
       .main_header-edit_btn Edit
   .chat-main
@@ -13,8 +17,7 @@
       
   .footer
     = form_for [@group, @message] do |f|
-      .input-box
-        
+      .input-box 
         = f.text_field :content, class: 'input-box_text', placeholder: 'type a message'
         .input-box__image
           =f.label :image, class: 'far fa-image' do
