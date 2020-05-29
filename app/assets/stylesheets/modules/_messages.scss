@@ -8,7 +8,7 @@
 .side-bar{
   height: 100vh;
   width: 300px;
-  background-color: #253141; 
+  background-color: #2f3e51; 
 }
 .group__group-name{
   font-size: 15px;
@@ -32,11 +32,10 @@
   }
 }
 .groups{
-  height: calc(100vh - 100px);
-    background-color: #2f3e51;
-    padding: 20px 20px 0;
-    overflow: scroll;
-    margin-bottom: 40px;
+   background-color: #2f3e51;
+   padding: 0px 20px 0;
+   overflow: scroll;
+   margin-bottom: 40px;
 }
 .chat-side{
   height: 100vh;
